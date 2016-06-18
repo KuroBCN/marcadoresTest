@@ -23,6 +23,11 @@ class MatchDAO: NSObject {
     
         getMatches("status=finished", result: result)
     }
+
+    class func getAllMatchesFromTournament( tournamentId : NSInteger, result : ( matches : [League] )->()) {
+        
+        getMatches("tournamentId=\(tournamentId)", result: result)
+    }
     
     // MARK: - Private methods
     private class func getMatches( query : String?, result : ( matches : [League] )->()){

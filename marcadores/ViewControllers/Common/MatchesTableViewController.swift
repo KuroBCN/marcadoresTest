@@ -82,9 +82,7 @@ class MatchesTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let vc = MatchDetailTableViewController(nibName: String(MatchDetailTableViewController), bundle: nil)
-        let league = leagues[indexPath.section]
-        vc.league = league
-        vc.match = league.matches[indexPath.row]
+        vc.match = leagues[indexPath.section].matches[indexPath.row]
         vc.hidesBottomBarWhenPushed = true;
 
         self.navigationController?.pushViewController(vc, animated: true)

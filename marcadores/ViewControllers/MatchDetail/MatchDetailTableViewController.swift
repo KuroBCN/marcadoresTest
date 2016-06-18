@@ -26,6 +26,8 @@ class MatchDetailTableViewController: UITableViewController {
         self.tableView.rowHeight = 80.0
         
         configurePullToRefresh()
+        
+        loadTournamentMatches()
     }
     
     override func didReceiveMemoryWarning() {
@@ -62,6 +64,17 @@ class MatchDetailTableViewController: UITableViewController {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(MatchesTableViewController.reloadData), forControlEvents: UIControlEvents.ValueChanged)
         self.refreshControl = refreshControl
+    }
+    
+    private func loadTournamentMatches(){
+        
+        if let tournamentId = match?.tournamentId {
+            MatchDAO.getAllMatchesFromTournament(tournamentId) { (matches) in
+                self.refreshControl?.endRefreshing()
+                self.league = matches.first
+                self.tableView.reloadData()
+            }
+        }
     }
     
     // MARK: - Table view data source
