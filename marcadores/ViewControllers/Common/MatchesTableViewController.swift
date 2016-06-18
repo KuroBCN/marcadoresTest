@@ -26,10 +26,6 @@ class MatchesTableViewController: UITableViewController {
         self.tableView.registerNib(UINib(nibName: String(MatchTableViewCell), bundle:nil), forCellReuseIdentifier: matchCellIdentifier)
         
         self.tableView.rowHeight = 80.0
-        
-//        self.navigationController?.navigationBar.translucent = false
-//        self.navigationController?.navigationBar.barTintColor = UIColor.marcadoresGreen()
-//        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
 
         configurePullToRefresh()
         reloadData()

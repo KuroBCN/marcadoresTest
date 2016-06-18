@@ -16,7 +16,7 @@ class MainViewController: UITabBarController {
         // Do any additional setup after loading the view.
         let firstTab = MatchesTableViewController(nibName: String(MatchesTableViewController), bundle: nil)
         let nav = UINavigationController(rootViewController: firstTab)
-        nav.tabBarItem = UITabBarItem(title: "All matches", image: UIImage.init(named: "first"), tag: 0)
+        nav.tabBarItem = UITabBarItem(title: "All matches", image: UIImage.init(named: "firstTab"), tag: 0)
         self.setViewControllers([nav], animated: false)
     }
 
