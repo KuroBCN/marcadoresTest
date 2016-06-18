@@ -21,13 +21,17 @@ class MatchesTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        configurePullToRefresh()
         
         // Register cells
         self.tableView.registerNib(UINib(nibName: String(MatchTableViewCell), bundle:nil), forCellReuseIdentifier: matchCellIdentifier)
         
         self.tableView.rowHeight = 80.0
         
+//        self.navigationController?.navigationBar.translucent = false
+//        self.navigationController?.navigationBar.barTintColor = UIColor.marcadoresGreen()
+//        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+
+        configurePullToRefresh()
         reloadData()
     }
 
@@ -88,10 +92,10 @@ class MatchesTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        let vc = MatchDetailTableViewController(nibName: String(MatchDetailTableViewController), bundle: nil)
-//        let league = leagues[indexPath.section]
-//        vc.league = league
-//        vc.match = league.matches[indexPath.row]
-//        self.navigationController?.pushViewController(vc, animated: true)
+        let vc = MatchDetailTableViewController(nibName: String(MatchDetailTableViewController), bundle: nil)
+        let league = leagues[indexPath.section]
+        vc.league = league
+        vc.match = league.matches[indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

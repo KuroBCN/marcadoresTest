@@ -25,6 +25,9 @@
 		3700E69C1D1562F100FD14D8 /* datos.json in Resources */ = {isa = PBXBuildFile; fileRef = 3700E69B1D1562F100FD14D8 /* datos.json */; };
 		3700E69F1D1566BE00FD14D8 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700E69D1D1566BE00FD14D8 /* MatchTableViewCell.swift */; };
 		3700E6A01D1566BE00FD14D8 /* MatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3700E69E1D1566BE00FD14D8 /* MatchTableViewCell.xib */; };
+		3700E6A31D156EC600FD14D8 /* MatchDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700E6A11D156EC600FD14D8 /* MatchDetailTableViewController.swift */; };
+		3700E6A41D156EC600FD14D8 /* MatchDetailTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3700E6A21D156EC600FD14D8 /* MatchDetailTableViewController.xib */; };
+		3700E6A71D15705800FD14D8 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700E6A61D15705800FD14D8 /* UIColorExtension.swift */; };
 		5DB486D38C5AFBC0D7844511 /* Pods_marcadores.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7E6AC9960A7F0813435A20 /* Pods_marcadores.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +73,9 @@
 		3700E69B1D1562F100FD14D8 /* datos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = datos.json; sourceTree = "<group>"; };
 		3700E69D1D1566BE00FD14D8 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
 		3700E69E1D1566BE00FD14D8 /* MatchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MatchTableViewCell.xib; sourceTree = "<group>"; };
+		3700E6A11D156EC600FD14D8 /* MatchDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchDetailTableViewController.swift; sourceTree = "<group>"; };
+		3700E6A21D156EC600FD14D8 /* MatchDetailTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MatchDetailTableViewController.xib; sourceTree = "<group>"; };
+		3700E6A61D15705800FD14D8 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		6DB7C5CBD2C9D5409071AD02 /* Pods-marcadores.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marcadores.release.xcconfig"; path = "Pods/Target Support Files/Pods-marcadores/Pods-marcadores.release.xcconfig"; sourceTree = "<group>"; };
 		6F460F27BEB71B558C6C2403 /* Pods-marcadores.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marcadores.debug.xcconfig"; path = "Pods/Target Support Files/Pods-marcadores/Pods-marcadores.debug.xcconfig"; sourceTree = "<group>"; };
 		AB7E6AC9960A7F0813435A20 /* Pods_marcadores.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_marcadores.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +174,7 @@
 		3700E67C1D15571F00FD14D8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3700E6A51D156FD100FD14D8 /* Extensions */,
 				3700E69B1D1562F100FD14D8 /* datos.json */,
 				3700E6931D155ECB00FD14D8 /* Helpers.swift */,
 				3700E6991D15623200FD14D8 /* constants.swift */,
@@ -226,8 +233,18 @@
 		3700E6821D15571F00FD14D8 /* MatchDetail */ = {
 			isa = PBXGroup;
 			children = (
+				3700E6A11D156EC600FD14D8 /* MatchDetailTableViewController.swift */,
+				3700E6A21D156EC600FD14D8 /* MatchDetailTableViewController.xib */,
 			);
 			path = MatchDetail;
+			sourceTree = "<group>";
+		};
+		3700E6A51D156FD100FD14D8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3700E6A61D15705800FD14D8 /* UIColorExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		6818A4615589D1D7394DF4E5 /* Frameworks */ = {
@@ -350,6 +367,7 @@
 				3700E68A1D15581100FD14D8 /* MatchesTableViewController.xib in Resources */,
 				3700E6861D15576800FD14D8 /* MainViewController.xib in Resources */,
 				3700E69C1D1562F100FD14D8 /* datos.json in Resources */,
+				3700E6A41D156EC600FD14D8 /* MatchDetailTableViewController.xib in Resources */,
 				3700E6A01D1566BE00FD14D8 /* MatchTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,12 +445,14 @@
 				3700E6851D15576800FD14D8 /* MainViewController.swift in Sources */,
 				3700E6921D155DE600FD14D8 /* Team.swift in Sources */,
 				3700E69A1D15623200FD14D8 /* constants.swift in Sources */,
+				3700E6A31D156EC600FD14D8 /* MatchDetailTableViewController.swift in Sources */,
 				3700E6941D155ECB00FD14D8 /* Helpers.swift in Sources */,
 				3700E68C1D155D8300FD14D8 /* MatchDAO.swift in Sources */,
 				3700E68E1D155DCD00FD14D8 /* Match.swift in Sources */,
 				3700E69F1D1566BE00FD14D8 /* MatchTableViewCell.swift in Sources */,
 				3700E6901D155DD800FD14D8 /* League.swift in Sources */,
 				3700E6891D15581100FD14D8 /* MatchesTableViewController.swift in Sources */,
+				3700E6A71D15705800FD14D8 /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

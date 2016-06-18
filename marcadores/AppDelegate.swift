@@ -19,6 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window?.rootViewController = MainViewController(nibName: String(MainViewController), bundle: nil)
         self.window?.makeKeyAndVisible()
+
+        self.window?.tintColor = UIColor.marcadoresGreen()
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+        
+        UINavigationBar.appearance().barTintColor = UIColor.marcadoresGreen()
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+
         return true
     }
 
