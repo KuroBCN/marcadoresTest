@@ -16,6 +16,16 @@
 		3700E6861D15576800FD14D8 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3700E6841D15576800FD14D8 /* MainViewController.xib */; };
 		3700E6891D15581100FD14D8 /* MatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700E6871D15581100FD14D8 /* MatchesTableViewController.swift */; };
 		3700E68A1D15581100FD14D8 /* MatchesTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3700E6881D15581100FD14D8 /* MatchesTableViewController.xib */; };
+		3700E68C1D155D8300FD14D8 /* MatchDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700E68B1D155D8300FD14D8 /* MatchDAO.swift */; };
+		3700E68E1D155DCD00FD14D8 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700E68D1D155DCD00FD14D8 /* Match.swift */; };
+		3700E6901D155DD800FD14D8 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700E68F1D155DD800FD14D8 /* League.swift */; };
+		3700E6921D155DE600FD14D8 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700E6911D155DE600FD14D8 /* Team.swift */; };
+		3700E6941D155ECB00FD14D8 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700E6931D155ECB00FD14D8 /* Helpers.swift */; };
+		3700E69A1D15623200FD14D8 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700E6991D15623200FD14D8 /* constants.swift */; };
+		3700E69C1D1562F100FD14D8 /* datos.json in Resources */ = {isa = PBXBuildFile; fileRef = 3700E69B1D1562F100FD14D8 /* datos.json */; };
+		3700E69F1D1566BE00FD14D8 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700E69D1D1566BE00FD14D8 /* MatchTableViewCell.swift */; };
+		3700E6A01D1566BE00FD14D8 /* MatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3700E69E1D1566BE00FD14D8 /* MatchTableViewCell.xib */; };
+		5DB486D38C5AFBC0D7844511 /* Pods_marcadores.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7E6AC9960A7F0813435A20 /* Pods_marcadores.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +61,18 @@
 		3700E6841D15576800FD14D8 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		3700E6871D15581100FD14D8 /* MatchesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesTableViewController.swift; sourceTree = "<group>"; };
 		3700E6881D15581100FD14D8 /* MatchesTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MatchesTableViewController.xib; sourceTree = "<group>"; };
+		3700E68B1D155D8300FD14D8 /* MatchDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchDAO.swift; sourceTree = "<group>"; };
+		3700E68D1D155DCD00FD14D8 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		3700E68F1D155DD800FD14D8 /* League.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
+		3700E6911D155DE600FD14D8 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		3700E6931D155ECB00FD14D8 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		3700E6991D15623200FD14D8 /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		3700E69B1D1562F100FD14D8 /* datos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = datos.json; sourceTree = "<group>"; };
+		3700E69D1D1566BE00FD14D8 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
+		3700E69E1D1566BE00FD14D8 /* MatchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MatchTableViewCell.xib; sourceTree = "<group>"; };
+		6DB7C5CBD2C9D5409071AD02 /* Pods-marcadores.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marcadores.release.xcconfig"; path = "Pods/Target Support Files/Pods-marcadores/Pods-marcadores.release.xcconfig"; sourceTree = "<group>"; };
+		6F460F27BEB71B558C6C2403 /* Pods-marcadores.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marcadores.debug.xcconfig"; path = "Pods/Target Support Files/Pods-marcadores/Pods-marcadores.debug.xcconfig"; sourceTree = "<group>"; };
+		AB7E6AC9960A7F0813435A20 /* Pods_marcadores.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_marcadores.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DB486D38C5AFBC0D7844511 /* Pods_marcadores.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35B70FD93AD82F76A8BCEFFE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6F460F27BEB71B558C6C2403 /* Pods-marcadores.debug.xcconfig */,
+				6DB7C5CBD2C9D5409071AD02 /* Pods-marcadores.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		3700E6421D1555A800FD14D8 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +117,8 @@
 				3700E6621D1555A900FD14D8 /* marcadoresTests */,
 				3700E66D1D1555A900FD14D8 /* marcadoresUITests */,
 				3700E64C1D1555A800FD14D8 /* Products */,
+				35B70FD93AD82F76A8BCEFFE /* Pods */,
+				6818A4615589D1D7394DF4E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +168,9 @@
 		3700E67C1D15571F00FD14D8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3700E69B1D1562F100FD14D8 /* datos.json */,
+				3700E6931D155ECB00FD14D8 /* Helpers.swift */,
+				3700E6991D15623200FD14D8 /* constants.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -141,6 +178,7 @@
 		3700E67D1D15571F00FD14D8 /* DAOs */ = {
 			isa = PBXGroup;
 			children = (
+				3700E68B1D155D8300FD14D8 /* MatchDAO.swift */,
 			);
 			path = DAOs;
 			sourceTree = "<group>";
@@ -148,6 +186,9 @@
 		3700E67E1D15571F00FD14D8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3700E68D1D155DCD00FD14D8 /* Match.swift */,
+				3700E68F1D155DD800FD14D8 /* League.swift */,
+				3700E6911D155DE600FD14D8 /* Team.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -169,6 +210,8 @@
 			children = (
 				3700E6871D15581100FD14D8 /* MatchesTableViewController.swift */,
 				3700E6881D15581100FD14D8 /* MatchesTableViewController.xib */,
+				3700E69D1D1566BE00FD14D8 /* MatchTableViewCell.swift */,
+				3700E69E1D1566BE00FD14D8 /* MatchTableViewCell.xib */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -187,6 +230,14 @@
 			path = MatchDetail;
 			sourceTree = "<group>";
 		};
+		6818A4615589D1D7394DF4E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB7E6AC9960A7F0813435A20 /* Pods_marcadores.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -194,9 +245,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3700E6731D1555A900FD14D8 /* Build configuration list for PBXNativeTarget "marcadores" */;
 			buildPhases = (
+				DB8B2E341D7429140D83C4CD /* [CP] Check Pods Manifest.lock */,
 				3700E6471D1555A800FD14D8 /* Sources */,
 				3700E6481D1555A800FD14D8 /* Frameworks */,
 				3700E6491D1555A800FD14D8 /* Resources */,
+				34982FDA825BBFF117F75313 /* [CP] Embed Pods Frameworks */,
+				B51FC88245826A8853D125FE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -295,6 +349,8 @@
 				3700E6561D1555A800FD14D8 /* Assets.xcassets in Resources */,
 				3700E68A1D15581100FD14D8 /* MatchesTableViewController.xib in Resources */,
 				3700E6861D15576800FD14D8 /* MainViewController.xib in Resources */,
+				3700E69C1D1562F100FD14D8 /* datos.json in Resources */,
+				3700E6A01D1566BE00FD14D8 /* MatchTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +370,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		34982FDA825BBFF117F75313 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-marcadores/Pods-marcadores-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B51FC88245826A8853D125FE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-marcadores/Pods-marcadores-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB8B2E341D7429140D83C4CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3700E6471D1555A800FD14D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -321,6 +425,13 @@
 			files = (
 				3700E64F1D1555A800FD14D8 /* AppDelegate.swift in Sources */,
 				3700E6851D15576800FD14D8 /* MainViewController.swift in Sources */,
+				3700E6921D155DE600FD14D8 /* Team.swift in Sources */,
+				3700E69A1D15623200FD14D8 /* constants.swift in Sources */,
+				3700E6941D155ECB00FD14D8 /* Helpers.swift in Sources */,
+				3700E68C1D155D8300FD14D8 /* MatchDAO.swift in Sources */,
+				3700E68E1D155DCD00FD14D8 /* Match.swift in Sources */,
+				3700E69F1D1566BE00FD14D8 /* MatchTableViewCell.swift in Sources */,
+				3700E6901D155DD800FD14D8 /* League.swift in Sources */,
 				3700E6891D15581100FD14D8 /* MatchesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,6 +564,7 @@
 		};
 		3700E6741D1555A900FD14D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F460F27BEB71B558C6C2403 /* Pods-marcadores.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = marcadores/Info.plist;
@@ -464,6 +576,7 @@
 		};
 		3700E6751D1555A900FD14D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DB7C5CBD2C9D5409071AD02 /* Pods-marcadores.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = marcadores/Info.plist;
@@ -538,6 +651,7 @@
 				3700E6751D1555A900FD14D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3700E6761D1555A900FD14D8 /* Build configuration list for PBXNativeTarget "marcadoresTests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +660,7 @@
 				3700E6781D1555A900FD14D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3700E6791D1555A900FD14D8 /* Build configuration list for PBXNativeTarget "marcadoresUITests" */ = {
 			isa = XCConfigurationList;
@@ -554,6 +669,7 @@
 				3700E67B1D1555A900FD14D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
