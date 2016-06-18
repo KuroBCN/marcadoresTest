@@ -14,11 +14,11 @@ class MainViewController: UITabBarController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let firstTab = MatchesTableViewController(nibName: String(MatchesTableViewController), bundle: nil)
+        let firstTab = AllMatchesTableViewController(nibName: String(MatchesTableViewController), bundle: nil)
         let nav = UINavigationController(rootViewController: firstTab)
         nav.tabBarItem = UITabBarItem(title: "All matches", image: UIImage.init(named: "firstTab"), tag: 0)
         
-        let secondTab = SecondTabTableViewController(nibName: String(MatchesTableViewController), bundle: nil)
+        let secondTab = LiveMatchesTableViewController(nibName: String(MatchesTableViewController), bundle: nil)
         let nav2 = UINavigationController(rootViewController: secondTab)
         nav2.tabBarItem = UITabBarItem(title: "LIVE", image: UIImage.init(named: "secondTab"), tag: 1)
         

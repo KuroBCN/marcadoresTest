@@ -28,8 +28,9 @@
 		3700E6A31D156EC600FD14D8 /* MatchDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700E6A11D156EC600FD14D8 /* MatchDetailTableViewController.swift */; };
 		3700E6A41D156EC600FD14D8 /* MatchDetailTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3700E6A21D156EC600FD14D8 /* MatchDetailTableViewController.xib */; };
 		3700E6A71D15705800FD14D8 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700E6A61D15705800FD14D8 /* UIColorExtension.swift */; };
-		3700E6AD1D15B9EB00FD14D8 /* SecondTabTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700E6AC1D15B9EB00FD14D8 /* SecondTabTableViewController.swift */; };
 		3700E6B11D15BA8C00FD14D8 /* FinishedMatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700E6B01D15BA8C00FD14D8 /* FinishedMatchesTableViewController.swift */; };
+		3700E6B31D15BEB800FD14D8 /* LiveMatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700E6B21D15BEB800FD14D8 /* LiveMatchesTableViewController.swift */; };
+		3700E6B51D15BEE500FD14D8 /* AllMatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700E6B41D15BEE500FD14D8 /* AllMatchesTableViewController.swift */; };
 		5DB486D38C5AFBC0D7844511 /* Pods_marcadores.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7E6AC9960A7F0813435A20 /* Pods_marcadores.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,8 +79,9 @@
 		3700E6A11D156EC600FD14D8 /* MatchDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchDetailTableViewController.swift; sourceTree = "<group>"; };
 		3700E6A21D156EC600FD14D8 /* MatchDetailTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MatchDetailTableViewController.xib; sourceTree = "<group>"; };
 		3700E6A61D15705800FD14D8 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
-		3700E6AC1D15B9EB00FD14D8 /* SecondTabTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondTabTableViewController.swift; sourceTree = "<group>"; };
 		3700E6B01D15BA8C00FD14D8 /* FinishedMatchesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishedMatchesTableViewController.swift; sourceTree = "<group>"; };
+		3700E6B21D15BEB800FD14D8 /* LiveMatchesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveMatchesTableViewController.swift; sourceTree = "<group>"; };
+		3700E6B41D15BEE500FD14D8 /* AllMatchesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllMatchesTableViewController.swift; sourceTree = "<group>"; };
 		6DB7C5CBD2C9D5409071AD02 /* Pods-marcadores.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marcadores.release.xcconfig"; path = "Pods/Target Support Files/Pods-marcadores/Pods-marcadores.release.xcconfig"; sourceTree = "<group>"; };
 		6F460F27BEB71B558C6C2403 /* Pods-marcadores.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marcadores.debug.xcconfig"; path = "Pods/Target Support Files/Pods-marcadores/Pods-marcadores.debug.xcconfig"; sourceTree = "<group>"; };
 		AB7E6AC9960A7F0813435A20 /* Pods_marcadores.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_marcadores.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -249,7 +251,7 @@
 		3700E6AB1D15B9EB00FD14D8 /* LIVEMatches */ = {
 			isa = PBXGroup;
 			children = (
-				3700E6AC1D15B9EB00FD14D8 /* SecondTabTableViewController.swift */,
+				3700E6B21D15BEB800FD14D8 /* LiveMatchesTableViewController.swift */,
 			);
 			path = LIVEMatches;
 			sourceTree = "<group>";
@@ -265,6 +267,7 @@
 		3700E6AF1D15BA4F00FD14D8 /* AllMatches */ = {
 			isa = PBXGroup;
 			children = (
+				3700E6B41D15BEE500FD14D8 /* AllMatchesTableViewController.swift */,
 			);
 			path = AllMatches;
 			sourceTree = "<group>";
@@ -465,12 +468,13 @@
 			files = (
 				3700E64F1D1555A800FD14D8 /* AppDelegate.swift in Sources */,
 				3700E6851D15576800FD14D8 /* MainViewController.swift in Sources */,
-				3700E6AD1D15B9EB00FD14D8 /* SecondTabTableViewController.swift in Sources */,
 				3700E6921D155DE600FD14D8 /* Team.swift in Sources */,
 				3700E69A1D15623200FD14D8 /* constants.swift in Sources */,
 				3700E6A31D156EC600FD14D8 /* MatchDetailTableViewController.swift in Sources */,
 				3700E6941D155ECB00FD14D8 /* Helpers.swift in Sources */,
+				3700E6B51D15BEE500FD14D8 /* AllMatchesTableViewController.swift in Sources */,
 				3700E68C1D155D8300FD14D8 /* MatchDAO.swift in Sources */,
+				3700E6B31D15BEB800FD14D8 /* LiveMatchesTableViewController.swift in Sources */,
 				3700E68E1D155DCD00FD14D8 /* Match.swift in Sources */,
 				3700E6B11D15BA8C00FD14D8 /* FinishedMatchesTableViewController.swift in Sources */,
 				3700E69F1D1566BE00FD14D8 /* MatchTableViewCell.swift in Sources */,

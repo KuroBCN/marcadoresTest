@@ -36,7 +36,7 @@ class MatchDAO: NSObject {
             .responseJSON { response in
                 
                 // load from file
-                //                let leaguesData = Helpers.loadJSONFile("datos").0
+                // let leaguesData = Helpers.loadJSONFile("datos").0
                 
                 var leagues = [League]()
                 if let leaguesData = response.result.value as? [AnyObject]{

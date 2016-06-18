@@ -1,5 +1,5 @@
 //
-//  SecondTabTableViewController.swift
+//  AllMatchesTableViewController.swift
 //  marcadores
 //
 //  Created by Pereiro, Delfin on 18/06/16.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-class SecondTabTableViewController: MatchesTableViewController {
+class AllMatchesTableViewController: MatchesTableViewController {
     
     override func reloadData() {
-        MatchDAO.getAllLiveMatches { (matches) in
+        MatchDAO.getAllMatches { (matches) in
             self.refreshControl?.endRefreshing()
             self.leagues = matches
             self.tableView.reloadData()
