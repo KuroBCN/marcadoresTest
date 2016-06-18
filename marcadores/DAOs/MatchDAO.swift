@@ -17,13 +17,15 @@ class MatchDAO: NSObject {
             .responseJSON { response in
                 
                 // load from file
-                let leaguesData = Helpers.loadJSONFile("datos").0
-                
-                // Parse leagues
+//                let leaguesData = Helpers.loadJSONFile("datos").0
+
                 var leagues = [League]()
-                for leagueData in leaguesData {
-                    if let league = League(leagueData: leagueData as? [String : AnyObject]){
-                        leagues.append(league)
+                if let leaguesData = response.result.value as? [AnyObject]{
+                    // Parse leagues
+                    for leagueData in leaguesData {
+                        if let league = League(leagueData: leagueData as? [String : AnyObject]){
+                            leagues.append(league)
+                        }
                     }
                 }
                 result(matches: leagues)

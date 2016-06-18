@@ -25,15 +25,17 @@ class MatchDetailTableViewController: UITableViewController {
         self.tableView.registerNib(UINib(nibName: String(MatchTableViewCell), bundle:nil), forCellReuseIdentifier: matchCellIdentifier)
         self.tableView.rowHeight = 80.0
         
-        let refreshControl = UIRefreshControl()
-        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        refreshControl.addTarget(self, action: #selector(MatchDetailTableViewController.reloadData), forControlEvents: UIControlEvents.ValueChanged)
-        self.refreshControl = refreshControl
+        configurePullToRefresh()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        configureNavigationBar()
     }
     
     // MARK: - Public methods
@@ -44,6 +46,22 @@ class MatchDetailTableViewController: UITableViewController {
         //            self.leagues = matches
         self.tableView.reloadData()
         //        }
+    }
+    
+    // MARK: - Private methods
+    
+    private func configureNavigationBar() {
+        
+        if let match =  self.match {
+            let title = match.homeTeam.shortName+" - "+match.visitorTeam.shortName
+            self.navigationItem.title = title            
+        }
+    }
+    
+    private func configurePullToRefresh(){
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(MatchesTableViewController.reloadData), forControlEvents: UIControlEvents.ValueChanged)
+        self.refreshControl = refreshControl
     }
     
     // MARK: - Table view data source

@@ -42,8 +42,7 @@ class MatchesTableViewController: UITableViewController {
     }
     
     // MARK: - Public methods
-    func reloadData() {
-        
+    func reloadData() {        
         MatchDAO.getAllMatches { (matches) in
             self.refreshControl?.endRefreshing()
             self.leagues = matches
