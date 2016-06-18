@@ -17,7 +17,17 @@ class MainViewController: UITabBarController {
         let firstTab = MatchesTableViewController(nibName: String(MatchesTableViewController), bundle: nil)
         let nav = UINavigationController(rootViewController: firstTab)
         nav.tabBarItem = UITabBarItem(title: "All matches", image: UIImage.init(named: "firstTab"), tag: 0)
-        self.setViewControllers([nav], animated: false)
+        
+        let secondTab = SecondTabTableViewController(nibName: String(MatchesTableViewController), bundle: nil)
+        let nav2 = UINavigationController(rootViewController: secondTab)
+        nav2.tabBarItem = UITabBarItem(title: "LIVE", image: UIImage.init(named: "secondTab"), tag: 1)
+        
+        let thirdTab = FinishedMatchesTableViewController(nibName: String(MatchesTableViewController), bundle: nil)
+        let nav3 = UINavigationController(rootViewController: thirdTab)
+        nav3.tabBarItem = UITabBarItem(title: "Finished", image: UIImage.init(named: "thirdTab"), tag: 2)
+        
+        self.setViewControllers([nav,nav2,nav3], animated: false)
+        
     }
 
     override func didReceiveMemoryWarning() {
