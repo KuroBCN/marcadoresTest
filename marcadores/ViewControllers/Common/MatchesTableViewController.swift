@@ -51,7 +51,6 @@ class MatchesTableViewController: UITableViewController {
     }
     
     // MARK: - Private methods
-    
     private func configureNavigationBar() {
         self.navigationItem.title = "Matches"
     }
@@ -91,6 +90,8 @@ class MatchesTableViewController: UITableViewController {
         let league = leagues[indexPath.section]
         vc.league = league
         vc.match = league.matches[indexPath.row]
+        vc.hidesBottomBarWhenPushed = true;
+
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
