@@ -61,7 +61,7 @@ class MatchDetailTableViewController: UITableViewController {
         //        }
     }
     
-    // MARK: - Private methods
+    // MARK: - Private methodsx
     
     private func configureNavigationBar() {
         
@@ -107,6 +107,7 @@ class MatchDetailTableViewController: UITableViewController {
         // Configure the cell...
         if let match = league?.matches[indexPath.row]{
             cell.configureCellWithMatch(match)
+            cell.selectionStyle = .None
         }
         return cell
     }
