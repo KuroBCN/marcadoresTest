@@ -39,19 +39,21 @@ class marcadoresUITests: XCTestCase {
         let name1 = "Manchester United"
         let name2 = "Arsenal"
         
-        var index : NSInteger?
+        var selectedMatch : Match?
         for match in matches {
             if match.homeTeam.name == name1 || match.visitorTeam.name == name1 ||
             match.homeTeam.name == name2 || match.visitorTeam.name == name2 {
-                index = matches.indexOf(match)
+                selectedMatch = match
+                print(selectedMatch)
                 break
             }
         }
 
-        if let index = index {
-            app.tables.cells.elementBoundByIndex(UInt(index)).tap()
-            let match = matches[index]
-            XCTAssert(app.tables["\(match.homeTeam.result!), \(match.visitorTeam.result!), FT, -, \(match.homeTeam.name), -, \(match.visitorTeam.name)"].exists)
+        if let selectedMatch = selectedMatch {
+            app.tables.cells.containingType(.StaticText, identifier: selectedMatch.homeTeam.name).containingType(.StaticText, identifier: selectedMatch.visitorTeam.name).element.tap()
+            
+//            app.tables.cells.elementBoundByIndex(UInt(index)).tap()
+            XCTAssert(app.tables["\(selectedMatch.homeTeam.result!), \(selectedMatch.visitorTeam.result!), FT, -, \(selectedMatch.homeTeam.name), -, \(selectedMatch.visitorTeam.name)"].exists)
         }
     }
     
