@@ -20,7 +20,7 @@ class TeamTests: XCTestCase {
         super.tearDown()
     }
     
-    func testValidMatch() {
+    func testValidTeam() {
         
         let teamData = ["id":8455,"name":"Chelsea","shortName":"Chelsea","logoUrl":"http://medias.whatsthescore.com/logos/icons/app-teams-large-ios-retina/8455.png"]
         

@@ -34,6 +34,9 @@ class Match: NSObject {
     convenience init? (matchData : [String:AnyObject]?) {
         
         let teamsArray = matchData?["teams"] as? [[String:AnyObject]]
+        if teamsArray?.count < 2 {
+            return nil
+        }
         
         if let
             id = matchData?["id"] as? NSInteger,
