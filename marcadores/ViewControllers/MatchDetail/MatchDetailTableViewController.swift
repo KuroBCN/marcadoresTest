@@ -31,7 +31,6 @@ class MatchDetailTableViewController: UITableViewController {
         let nibview = NSBundle.mainBundle().loadNibNamed(String(MatchDetailHeaderViewViewController), owner: nil, options: nil)        
         if let header = nibview.first as? MatchDetailHeaderViewViewController {
             header.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
-            //        self.stretchyHeader.delegate = self; // this is completely optional
             header.configHeaderWithMatch(self.match!)
             self.tableView.addSubview(header)
         }

@@ -22,29 +22,23 @@ class MatchDetailHeaderViewViewController: GSKStretchyHeaderView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.maximumContentHeight = 200.0
+        self.maximumContentHeight = 136.0
         self.minimumContentHeight = 64.0
         filterView.backgroundColor = UIColor.marcadoresGreen()
         filterView.alpha = 0.5
-        
-//        self.contentView.backgroundColor = [UIColor colorWithWhite:0.2 alpha:1];
-//        if (kNavBar) {
-//            self.minimumContentHeight = 64;
-//        } else {
-//            self.navigationTitleLabel.hidden = YES;
-//        }
     }
     
     override func didChangeStretchFactor(stretchFactor: CGFloat) {
-        var alpha = CGFloatInterpolate(stretchFactor, 1.0, 0.7)
-        alpha = max(0, min(1, alpha));
+        var alpha = CGFloatInterpolate(stretchFactor, 1.0, 0.8)
+        alpha = max(0.80, min(1, alpha));
         filterView.alpha = alpha
         
         var teamsNamesAlpha = CGFloatInterpolate(stretchFactor, 0.0, 1.0)
         teamsNamesAlpha = max(0, min(1, teamsNamesAlpha));
         teamsNamesContainerView.alpha = teamsNamesAlpha
         
-        let containerHeight = CGFloatInterpolate(stretchFactor, 50.0, 80.0)
+        var containerHeight = CGFloatInterpolate(stretchFactor, 50.0, 80.0)
+        containerHeight = max(50.0, min(80.0, containerHeight))
         containerViewConstraintHeight.constant = containerHeight
         self.layoutIfNeeded()
     }
