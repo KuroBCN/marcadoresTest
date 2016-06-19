@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -14,31 +16,83 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ncV-e7-J93" userLabel="HomeTeam-Image View">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ncV-e7-J93" userLabel="HomeTeam-Image View">
                         <rect key="frame" x="8" y="17" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="ncV-e7-J93" secondAttribute="height" multiplier="1:1" id="20f-Fb-huv"/>
+                            <constraint firstAttribute="width" secondItem="ncV-e7-J93" secondAttribute="height" multiplier="1:1" id="4g6-Zn-Bz3"/>
+                            <constraint firstAttribute="width" constant="45" id="aNO-Db-7aL"/>
+                            <constraint firstAttribute="height" constant="45" id="fa6-ab-YlO"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="20f-Fb-huv"/>
+                                <exclude reference="4g6-Zn-Bz3"/>
+                            </mask>
+                        </variation>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Id-u1-Kq5" userLabel="VisitorTeam-Image View">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Id-u1-Kq5" userLabel="VisitorTeam-Image View">
                         <rect key="frame" x="322" y="17" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="6Mw-K4-Ioy"/>
+                            <constraint firstAttribute="width" constant="45" id="MbN-yg-PFt"/>
+                            <constraint firstAttribute="width" secondItem="5Id-u1-Kq5" secondAttribute="height" multiplier="1:1" id="Uag-6w-y6C"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Uag-6w-y6C"/>
+                            </mask>
+                        </variation>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00-00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hE-Br-HK7" userLabel="Score - Label">
-                        <rect key="frame" x="160" y="19" width="54" height="41"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00-00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hE-Br-HK7" userLabel="Score - Label">
+                        <rect key="frame" x="160" y="0.0" width="54" height="79.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="54" id="7UO-6p-hWA"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_Arsenal" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="6d7-lI-YJB" userLabel="HomeTeam - Label">
-                        <rect key="frame" x="61" y="29" width="91" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_Arsenal" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="6d7-lI-YJB" userLabel="HomeTeam - Label">
+                        <rect key="frame" x="61" y="0.0" width="90.5" height="79.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_Southamptom" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="kAE-1f-E53" userLabel="VisitorTeam - Label">
-                        <rect key="frame" x="222" y="29" width="92" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_Southamptom" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="kAE-1f-E53" userLabel="VisitorTeam - Label">
+                        <rect key="frame" x="222" y="0.0" width="92" height="79.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="ncV-e7-J93" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="0mY-2t-D1A"/>
+                    <constraint firstItem="ncV-e7-J93" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="2Aa-4n-BGg"/>
+                    <constraint firstItem="5Id-u1-Kq5" firstAttribute="leading" secondItem="kAE-1f-E53" secondAttribute="trailing" constant="8" id="4QX-OA-WEM"/>
+                    <constraint firstItem="0hE-Br-HK7" firstAttribute="leading" secondItem="6d7-lI-YJB" secondAttribute="trailing" constant="8" id="5cz-5m-zbr"/>
+                    <constraint firstItem="ncV-e7-J93" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="652-nj-bzS"/>
+                    <constraint firstItem="6d7-lI-YJB" firstAttribute="leading" secondItem="ncV-e7-J93" secondAttribute="trailing" constant="8" id="BLo-Qk-9yc"/>
+                    <constraint firstItem="5Id-u1-Kq5" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="EOl-Sv-9My"/>
+                    <constraint firstAttribute="bottom" secondItem="0hE-Br-HK7" secondAttribute="bottom" id="FAG-04-PTH"/>
+                    <constraint firstItem="ncV-e7-J93" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Fev-Bn-FFO"/>
+                    <constraint firstItem="kAE-1f-E53" firstAttribute="leading" secondItem="0hE-Br-HK7" secondAttribute="trailing" constant="8" id="Ia8-Hj-7Bv"/>
+                    <constraint firstItem="6d7-lI-YJB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="VyA-l1-d5J"/>
+                    <constraint firstItem="6d7-lI-YJB" firstAttribute="leading" secondItem="ncV-e7-J93" secondAttribute="trailing" constant="8" id="XjW-ga-pDq"/>
+                    <constraint firstItem="kAE-1f-E53" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dDF-4q-7Ef"/>
+                    <constraint firstAttribute="bottom" secondItem="6d7-lI-YJB" secondAttribute="bottom" id="gRp-Ix-gWG"/>
+                    <constraint firstItem="0hE-Br-HK7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="jg3-cX-Un6"/>
+                    <constraint firstItem="5Id-u1-Kq5" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="pqv-je-bHs"/>
+                    <constraint firstAttribute="bottom" secondItem="kAE-1f-E53" secondAttribute="bottom" id="soY-NZ-uPX"/>
+                    <constraint firstItem="0hE-Br-HK7" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="xBP-Dh-sn3"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="0mY-2t-D1A"/>
+                        <exclude reference="2Aa-4n-BGg"/>
+                        <exclude reference="BLo-Qk-9yc"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="homeTeamLogoImageView" destination="ncV-e7-J93" id="0Hy-ce-6U3"/>
