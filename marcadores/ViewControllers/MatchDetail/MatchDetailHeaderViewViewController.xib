@@ -49,6 +49,7 @@
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZzW-W5-uEn" userLabel="VisitorTeamScore - Label">
                             <rect key="frame" x="200" y="0.0" width="50" height="80"/>
+                            <accessibility key="accessibilityConfiguration" identifier="visitorScore"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="ZzW-W5-uEn" secondAttribute="height" multiplier="5:8" id="HIb-bo-0TS"/>
                             </constraints>
@@ -83,6 +84,7 @@
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CDL-MP-fIZ" userLabel="HomeTeamScore - Label">
                             <rect key="frame" x="125" y="0.0" width="50" height="80"/>
+                            <accessibility key="accessibilityConfiguration" identifier="homeScore"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="CDL-MP-fIZ" secondAttribute="height" multiplier="5:8" id="GeR-Lp-SOV"/>
                             </constraints>
