@@ -22,6 +22,8 @@ class MatchDetailHeaderViewViewController: GSKStretchyHeaderView {
     @IBOutlet weak var homeTeamNameLabel: UILabel!
     @IBOutlet weak var visitorTeamNameLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var homeTeamScoreLabel: UILabel!
+    @IBOutlet weak var visitorTeamScoreLabel: UILabel!
     
     @IBOutlet weak var containerViewConstraintHeight: NSLayoutConstraint!
     
@@ -54,7 +56,9 @@ class MatchDetailHeaderViewViewController: GSKStretchyHeaderView {
         homeTeamLogoImageView.sd_setImageWithURL(NSURL(string: match.homeTeam.logoUrl))
         visitorTeamLogoImageView.sd_setImageWithURL(NSURL(string: match.visitorTeam.logoUrl))
         homeTeamNameLabel.text = match.homeTeam.name
+        homeTeamScoreLabel.text = match.homeTeam.result
         visitorTeamNameLabel.text = match.visitorTeam.name
+        visitorTeamScoreLabel.text = match.visitorTeam.result
         statusLabel.text = match.statusShortDesc
     }
 }

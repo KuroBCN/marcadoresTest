@@ -47,15 +47,6 @@
                                 </mask>
                             </variation>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CDL-MP-fIZ" userLabel="HomeTeamScore - Label">
-                            <rect key="frame" x="125" y="0.0" width="50" height="80"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="CDL-MP-fIZ" secondAttribute="height" multiplier="5:8" id="GeR-Lp-SOV"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZzW-W5-uEn" userLabel="VisitorTeamScore - Label">
                             <rect key="frame" x="200" y="0.0" width="50" height="80"/>
                             <constraints>
@@ -89,6 +80,15 @@
                                     <exclude reference="C5x-jp-Vrs"/>
                                 </mask>
                             </variation>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CDL-MP-fIZ" userLabel="HomeTeamScore - Label">
+                            <rect key="frame" x="125" y="0.0" width="50" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="CDL-MP-fIZ" secondAttribute="height" multiplier="5:8" id="GeR-Lp-SOV"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <constraints>
@@ -229,10 +229,12 @@
                 <outlet property="filterView" destination="bEv-C2-DIr" id="ilU-VV-HhD"/>
                 <outlet property="homeTeamLogoImageView" destination="ZFr-W2-NS4" id="aMg-ER-bxm"/>
                 <outlet property="homeTeamNameLabel" destination="yln-4h-reK" id="Vds-Sn-2O4"/>
+                <outlet property="homeTeamScoreLabel" destination="CDL-MP-fIZ" id="ce5-4o-GBb"/>
                 <outlet property="statusLabel" destination="3CR-4C-pK9" id="x2m-1i-9wK"/>
                 <outlet property="teamsNamesContainerView" destination="TH2-kY-RJ0" id="nqi-pr-W9B"/>
                 <outlet property="visitorTeamLogoImageView" destination="iLh-iX-eWS" id="A6u-CG-WP8"/>
                 <outlet property="visitorTeamNameLabel" destination="LQM-Mi-QRy" id="rM3-96-QdJ"/>
+                <outlet property="visitorTeamScoreLabel" destination="ZzW-W5-uEn" id="pKy-cZ-WOK"/>
             </connections>
             <point key="canvasLocation" x="-19.5" y="158"/>
         </view>
