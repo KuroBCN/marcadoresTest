@@ -36,11 +36,13 @@ class marcadoresUITests: XCTestCase {
         let leagues = getLeagues()
         let matches = leagues[0].matches
         
-//        let name = "Manchester United"
-        let name = "Cologne"
+        let name1 = "Manchester United"
+        let name2 = "Arsenal"
+        
         var index : NSInteger?
         for match in matches {
-            if match.homeTeam.name == name || match.visitorTeam.name == name {
+            if match.homeTeam.name == name1 || match.visitorTeam.name == name1 ||
+            match.homeTeam.name == name2 || match.visitorTeam.name == name2 {
                 index = matches.indexOf(match)
                 break
             }
@@ -48,9 +50,6 @@ class marcadoresUITests: XCTestCase {
 
         if let index = index {
             app.tables.cells.elementBoundByIndex(UInt(index)).tap()
-            
-            
-            
             let match = matches[index]
             XCTAssert(app.tables["\(match.homeTeam.result!), \(match.visitorTeam.result!), FT, -, \(match.homeTeam.name), -, \(match.visitorTeam.name)"].exists)
         }
