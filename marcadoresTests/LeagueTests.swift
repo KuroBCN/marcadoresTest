@@ -20,16 +20,32 @@ class LeagueTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testValidLeague() {
+        let leagueData = ["relatedToObjectId":"47","name":"Premier League","matches":[]]
+        let league = League(leagueData: leagueData)
+        XCTAssertNotNil(league)
+        XCTAssertEqual(league?.id, leagueData["relatedToObjectId"])
+        XCTAssertEqual(league?.name, leagueData["name"])
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
+
+    func testNoMatches() {
+        let leagueData = ["relatedToObjectId":"47","name":"Premier League"]
+        XCTAssertNotNil( League(leagueData: leagueData))
     }
-    
+
+    func testInvalidId() {
+        let leagueData = ["relatedToObjectId":47,"name":"Premier League","matches":[]]
+        XCTAssertNil( League(leagueData: leagueData))
+    }
+
+    func testNoId() {
+        let leagueData = ["name":"Premier League","matches":[]]
+        XCTAssertNil( League(leagueData: leagueData))
+    }
+
+    func testNoName() {
+        let leagueData = ["relatedToObjectId":"47","matches":[]]
+        XCTAssertNil( League(leagueData: leagueData))
+    }
+
 }
