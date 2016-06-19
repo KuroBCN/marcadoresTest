@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '3AD87D8A2034DE2ECAD646668F81D202'
-               BlueprintName = 'SDWebImage'
+               BlueprintIdentifier = '6A6A3E8BEA5AAE37F75D8190C3C13240'
+               BlueprintName = 'GSKStretchyHeaderView'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SDWebImage.framework'>
+               BuildableName = 'GSKStretchyHeaderView.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

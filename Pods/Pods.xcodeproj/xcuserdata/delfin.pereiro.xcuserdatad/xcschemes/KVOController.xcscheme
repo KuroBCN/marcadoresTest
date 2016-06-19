@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '3AD87D8A2034DE2ECAD646668F81D202'
-               BlueprintName = 'SDWebImage'
+               BlueprintIdentifier = 'ECE9B41C712D4E0E10996BE4FDF9EEEE'
+               BlueprintName = 'KVOController'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SDWebImage.framework'>
+               BuildableName = 'KVOController.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

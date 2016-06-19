@@ -1,17 +1,23 @@
 PODS:
   - Alamofire (3.4.1)
+  - GSKStretchyHeaderView (0.10.2):
+    - KVOController (~> 1.1)
+  - KVOController (1.1.0)
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
   - SDWebImage/Core (3.8.1)
 
 DEPENDENCIES:
   - Alamofire (~> 3.4)
+  - GSKStretchyHeaderView
   - SDWebImage (~> 3.8)
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  GSKStretchyHeaderView: 04aaed476b0422ba3bb4e9526dc0b03300370175
+  KVOController: 321b5fc59300fcaabd42c0f679baa7a27efbb2fd
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
 
-PODFILE CHECKSUM: 368f0e45b48f10477b99cbb0ccf1ddc23b968ef6
+PODFILE CHECKSUM: 4586cf472a0e683f9fa3f75c6c4952c2c0735766
 
 COCOAPODS: 1.0.1

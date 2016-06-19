@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import GSKStretchyHeaderView
 
 class MatchDetailTableViewController: UITableViewController {
 
     var match : Match?
     var league : League?
+    var header : GSKStretchyHeaderView?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +27,14 @@ class MatchDetailTableViewController: UITableViewController {
         
         self.tableView.registerNib(UINib(nibName: String(MatchTableViewCell), bundle:nil), forCellReuseIdentifier: matchCellIdentifier)
         self.tableView.rowHeight = 80.0
+        
+        let nibview = NSBundle.mainBundle().loadNibNamed(String(MatchDetailHeaderViewViewController), owner: nil, options: nil)        
+        if let header = nibview.first as? MatchDetailHeaderViewViewController {
+            header.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+            //        self.stretchyHeader.delegate = self; // this is completely optional
+            header.configHeaderWithMatch(self.match!)
+            self.tableView.addSubview(header)
+        }
         
         configurePullToRefresh()
         

@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>GSKStretchyHeaderView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>KVOController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-marcadores.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,7 +32,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2988707CD445927E9F5D1885D9F7F968</key>
+		<key>3AD87D8A2034DE2ECAD646668F81D202</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6A6A3E8BEA5AAE37F75D8190C3C13240</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -32,7 +47,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>857BA83EE20D40818ACA5CC7B837A7A3</key>
+		<key>9086867F22A122D6FD7C19209BA1D61B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ECE9B41C712D4E0E10996BE4FDF9EEEE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

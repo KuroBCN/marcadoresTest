@@ -34,6 +34,8 @@
 		3700E6B91D15C2B400FD14D8 /* MatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700E6B81D15C2B400FD14D8 /* MatchTests.swift */; };
 		3700E6BB1D15C2D400FD14D8 /* TeamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700E6BA1D15C2D400FD14D8 /* TeamTests.swift */; };
 		3700E6BD1D15C2E600FD14D8 /* LeagueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700E6BC1D15C2E600FD14D8 /* LeagueTests.swift */; };
+		3700E6C01D15EB4300FD14D8 /* MatchDetailHeaderViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700E6BE1D15EB4300FD14D8 /* MatchDetailHeaderViewViewController.swift */; };
+		3700E6C11D15EB4300FD14D8 /* MatchDetailHeaderViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3700E6BF1D15EB4300FD14D8 /* MatchDetailHeaderViewViewController.xib */; };
 		5DB486D38C5AFBC0D7844511 /* Pods_marcadores.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7E6AC9960A7F0813435A20 /* Pods_marcadores.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +90,8 @@
 		3700E6B81D15C2B400FD14D8 /* MatchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchTests.swift; sourceTree = "<group>"; };
 		3700E6BA1D15C2D400FD14D8 /* TeamTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTests.swift; sourceTree = "<group>"; };
 		3700E6BC1D15C2E600FD14D8 /* LeagueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeagueTests.swift; sourceTree = "<group>"; };
+		3700E6BE1D15EB4300FD14D8 /* MatchDetailHeaderViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchDetailHeaderViewViewController.swift; sourceTree = "<group>"; };
+		3700E6BF1D15EB4300FD14D8 /* MatchDetailHeaderViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MatchDetailHeaderViewViewController.xib; sourceTree = "<group>"; };
 		6DB7C5CBD2C9D5409071AD02 /* Pods-marcadores.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marcadores.release.xcconfig"; path = "Pods/Target Support Files/Pods-marcadores/Pods-marcadores.release.xcconfig"; sourceTree = "<group>"; };
 		6F460F27BEB71B558C6C2403 /* Pods-marcadores.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marcadores.debug.xcconfig"; path = "Pods/Target Support Files/Pods-marcadores/Pods-marcadores.debug.xcconfig"; sourceTree = "<group>"; };
 		AB7E6AC9960A7F0813435A20 /* Pods_marcadores.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_marcadores.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -245,6 +249,8 @@
 			children = (
 				3700E6A11D156EC600FD14D8 /* MatchDetailTableViewController.swift */,
 				3700E6A21D156EC600FD14D8 /* MatchDetailTableViewController.xib */,
+				3700E6BE1D15EB4300FD14D8 /* MatchDetailHeaderViewViewController.swift */,
+				3700E6BF1D15EB4300FD14D8 /* MatchDetailHeaderViewViewController.xib */,
 			);
 			path = MatchDetail;
 			sourceTree = "<group>";
@@ -399,6 +405,7 @@
 				3700E6591D1555A800FD14D8 /* LaunchScreen.storyboard in Resources */,
 				3700E6561D1555A800FD14D8 /* Assets.xcassets in Resources */,
 				3700E68A1D15581100FD14D8 /* MatchesTableViewController.xib in Resources */,
+				3700E6C11D15EB4300FD14D8 /* MatchDetailHeaderViewViewController.xib in Resources */,
 				3700E6861D15576800FD14D8 /* MainViewController.xib in Resources */,
 				3700E69C1D1562F100FD14D8 /* datos.json in Resources */,
 				3700E6A41D156EC600FD14D8 /* MatchDetailTableViewController.xib in Resources */,
@@ -482,6 +489,7 @@
 				3700E6A31D156EC600FD14D8 /* MatchDetailTableViewController.swift in Sources */,
 				3700E6941D155ECB00FD14D8 /* Helpers.swift in Sources */,
 				3700E6B51D15BEE500FD14D8 /* AllMatchesTableViewController.swift in Sources */,
+				3700E6C01D15EB4300FD14D8 /* MatchDetailHeaderViewViewController.swift in Sources */,
 				3700E68C1D155D8300FD14D8 /* MatchDAO.swift in Sources */,
 				3700E6B31D15BEB800FD14D8 /* LiveMatchesTableViewController.swift in Sources */,
 				3700E68E1D155DCD00FD14D8 /* Match.swift in Sources */,
