@@ -35,7 +35,7 @@ class MatchDetailTableViewController: UITableViewController {
             self.tableView.addSubview(header)
         }
         
-        configurePullToRefresh()
+//        configurePullToRefresh()
         
         loadTournamentMatches()
     }
@@ -51,16 +51,19 @@ class MatchDetailTableViewController: UITableViewController {
     }
     
     // MARK: - Public methods
-    func reloadData() {
+    
+    func loadTournamentMatches(){
         
-        //        MatchDAO.getAllMatches { (matches) in
-        self.refreshControl?.endRefreshing()
-        //            self.leagues = matches
-        self.tableView.reloadData()
-        //        }
+        if let tournamentId = match?.tournamentId {
+            MatchDAO.getAllMatchesFromTournament(tournamentId) { (matches) in
+//                self.refreshControl?.endRefreshing()
+                self.league = matches.first
+                self.tableView.reloadData()
+            }
+        }
     }
     
-    // MARK: - Private methodsx
+    // MARK: - Private methods
     
     private func configureNavigationBar() {
         
@@ -72,20 +75,11 @@ class MatchDetailTableViewController: UITableViewController {
     
     private func configurePullToRefresh(){
         let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(MatchesTableViewController.reloadData), forControlEvents: UIControlEvents.ValueChanged)
+        refreshControl.addTarget(self, action: #selector(MatchDetailTableViewController.loadTournamentMatches), forControlEvents: UIControlEvents.ValueChanged)
         self.refreshControl = refreshControl
     }
     
-    private func loadTournamentMatches(){
-        
-        if let tournamentId = match?.tournamentId {
-            MatchDAO.getAllMatchesFromTournament(tournamentId) { (matches) in
-                self.refreshControl?.endRefreshing()
-                self.league = matches.first
-                self.tableView.reloadData()
-            }
-        }
-    }
+
     
     // MARK: - Table view data source
     

@@ -12,7 +12,10 @@ class AllMatchesTableViewController: MatchesTableViewController {
     
     override func reloadData() {
         MatchDAO.getAllMatches { (matches) in
-            self.refreshControl?.endRefreshing()
+            
+            if let refresh = self.refreshControl where refresh.refreshing {
+                self.refreshControl?.endRefreshing()
+            }
             self.leagues = matches
             self.tableView.reloadData()
         }

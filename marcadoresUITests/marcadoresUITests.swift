@@ -28,9 +28,46 @@ class marcadoresUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testMatchDetailHeader(){
+        
+        let app = XCUIApplication()
+        XCTAssert(app.exists)
+    
+        let leagues = getLeagues()
+        let matches = leagues[0].matches
+        
+        let name1 = "Manchester United"
+        let name2 = "Arsenal"
+        
+        var index : NSInteger?
+        for match in matches {
+            if match.homeTeam.name == name1 || match.visitorTeam.name == name1 ||
+            match.homeTeam.name == name2 || match.visitorTeam.name == name2 {
+                index = matches.indexOf(match)
+                break
+            }
+        }
+
+        if let index = index {
+            app.tables.cells.elementBoundByIndex(UInt(index)).tap()
+            let match = matches[index]
+            XCTAssert(app.tables["\(match.homeTeam.result!), \(match.visitorTeam.result!), FT, -, \(match.homeTeam.name), -, \(match.visitorTeam.name)"].exists)
+        }
     }
     
+    func getLeagues()->[League]{
+        
+        var leagues = [League]()
+        
+        let campaignExpectation = expectationWithDescription("Leagues call")
+        
+        MatchDAO.getAllMatches { (matches) in
+            leagues = matches
+            campaignExpectation.fulfill()
+        }
+        
+        self.waitForExpectationsWithTimeout(20, handler: nil)
+        
+        return leagues
+    }
 }

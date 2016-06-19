@@ -11,7 +11,9 @@ import UIKit
 class FinishedMatchesTableViewController: MatchesTableViewController {
     override func reloadData() {
         MatchDAO.getAllFinishedMatches { (matches) in
-            self.refreshControl?.endRefreshing()
+            if let refresh = self.refreshControl where refresh.refreshing {
+                self.refreshControl?.endRefreshing()
+            }
             self.leagues = matches
             self.tableView.reloadData()
         }
