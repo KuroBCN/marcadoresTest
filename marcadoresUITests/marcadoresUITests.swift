@@ -44,7 +44,7 @@ class marcadoresUITests: XCTestCase {
             if match.homeTeam.name == name1 || match.visitorTeam.name == name1 ||
             match.homeTeam.name == name2 || match.visitorTeam.name == name2 {
                 selectedMatch = match
-                print(selectedMatch)
+                print(match.homeTeam.name+"-"+match.visitorTeam.name)
                 break
             }
         }
@@ -52,8 +52,7 @@ class marcadoresUITests: XCTestCase {
         if let selectedMatch = selectedMatch {
             app.tables.cells.containingType(.StaticText, identifier: selectedMatch.homeTeam.name).containingType(.StaticText, identifier: selectedMatch.visitorTeam.name).element.tap()
             
-//            app.tables.cells.elementBoundByIndex(UInt(index)).tap()
-            XCTAssert(app.tables["\(selectedMatch.homeTeam.result!), \(selectedMatch.visitorTeam.result!), FT, -, \(selectedMatch.homeTeam.name), -, \(selectedMatch.visitorTeam.name)"].exists)
+            XCTAssert(app.tables["\(selectedMatch.homeTeam.result!), \(selectedMatch.visitorTeam.result!), FT, -, \(selectedMatch.homeTeam.name), -, \(selectedMatch.visitorTeam.name)"].exists)            
         }
     }
     

@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-marcadoresTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-marcadoresUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -53,6 +58,11 @@
 			<true/>
 		</dict>
 		<key>9086867F22A122D6FD7C19209BA1D61B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9AFCB1815D77D4D029C49442025BC3CA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -20,16 +20,74 @@ class TeamTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testValidMatch() {
+        
+        let teamData = ["id":8455,"name":"Chelsea","shortName":"Chelsea","logoUrl":"http://medias.whatsthescore.com/logos/icons/app-teams-large-ios-retina/8455.png"]
+        
+        let team = Team(teamData: teamData)
+        XCTAssertNotNil(team)
+        XCTAssertEqual(team?.id, teamData["id"])
+        XCTAssertEqual(team?.name, teamData["name"])
+        XCTAssertEqual(team?.shortName, teamData["shortName"])
+        XCTAssertEqual(team?.logoUrl, teamData["logoUrl"])
+        XCTAssertNil(team?.result)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
+    func testInvalidId() {
+        
+        let teamData = ["id":"28455","name":"Chelsea","shortName":"Chelsea","logoUrl":"http://medias.whatsthescore.com/logos/icons/app-teams-large-ios-retina/8455.png"]
+        
+        let team = Team(teamData: teamData)
+        XCTAssertNil(team)
     }
     
+    func testNoId() {
+        
+        let teamData = ["name":"Chelsea","shortName":"Chelsea","logoUrl":"http://medias.whatsthescore.com/logos/icons/app-teams-large-ios-retina/8455.png"]
+        
+        let team = Team(teamData: teamData)
+        XCTAssertNil(team)
+    }
+    
+    func testNoName() {
+        let teamData = ["id":28455,"shortName":"Chelsea","logoUrl":"http://medias.whatsthescore.com/logos/icons/app-teams-large-ios-retina/8455.png"]
+        
+        let team = Team(teamData: teamData)
+        XCTAssertNil(team)
+    }
+    
+    func testNoShorName() {
+        let teamData = ["id":28455,"name":"Chelsea","logoUrl":"http://medias.whatsthescore.com/logos/icons/app-teams-large-ios-retina/8455.png"]
+        
+        let team = Team(teamData: teamData)
+        XCTAssertNil(team)
+    }
+    
+    func testNoLogoURL() {
+        let teamData = ["id":8455,"name":"Chelsea","shortName":"Chelsea"]
+        
+        let team = Team(teamData: teamData)
+        XCTAssertNil(team)
+    }
+    
+    func testValidResults() {
+        
+        let results = ["runningscore":"0"]
+        let teamData = ["id":8455,"name":"Chelsea","shortName":"Chelsea","logoUrl":"http://medias.whatsthescore.com/logos/icons/app-teams-large-ios-retina/8455.png","results":results] as [String:AnyObject]
+        
+        let team = Team(teamData: teamData)
+        XCTAssertNotNil(team)
+        XCTAssertEqual(team?.result, results["runningscore"])
+    }
+    
+    func testInvalidResults() {
+        
+        let results = ["runningscore":0]
+        let teamData = ["id":8455,"name":"Chelsea","shortName":"Chelsea","logoUrl":"http://medias.whatsthescore.com/logos/icons/app-teams-large-ios-retina/8455.png","results":results] as [String:AnyObject]
+        
+        let team = Team(teamData: teamData)
+        XCTAssertNotNil(team)
+        XCTAssertNil(team?.result)
+    }
+
 }
