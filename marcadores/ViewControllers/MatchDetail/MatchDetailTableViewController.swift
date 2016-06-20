@@ -28,12 +28,7 @@ class MatchDetailTableViewController: UITableViewController {
         self.tableView.registerNib(UINib(nibName: String(MatchTableViewCell), bundle:nil), forCellReuseIdentifier: matchCellIdentifier)
         self.tableView.rowHeight = 80.0
         
-        let nibview = NSBundle.mainBundle().loadNibNamed(String(MatchDetailHeaderViewViewController), owner: nil, options: nil)        
-        if let header = nibview.first as? MatchDetailHeaderViewViewController {
-            header.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
-            header.configHeaderWithMatch(self.match!)
-            self.tableView.addSubview(header)
-        }
+        configureTableHeader()
         
 //        configurePullToRefresh()
         
@@ -70,6 +65,16 @@ class MatchDetailTableViewController: UITableViewController {
         if let match =  self.match {
             let title = match.homeTeam.shortName+" - "+match.visitorTeam.shortName
             self.navigationItem.title = title            
+        }
+    }
+    
+    func configureTableHeader(){
+        let nibview = NSBundle.mainBundle().loadNibNamed(String(MatchDetailHeaderViewViewController), owner: nil, options: nil)
+        if let header = nibview.first as? MatchDetailHeaderViewViewController {
+            header.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+            header.configHeaderWithMatch(self.match!)
+            header.isAccessibilityElement = false
+            self.tableView.addSubview(header)
         }
     }
     

@@ -61,4 +61,6 @@ class MatchDetailHeaderViewViewController: GSKStretchyHeaderView {
         visitorTeamScoreLabel.text = match.visitorTeam.result
         statusLabel.text = match.statusShortDesc
     }
+    
+    
 }
