@@ -34,25 +34,31 @@ class marcadoresUITests: XCTestCase {
         XCTAssert(app.exists)
     
         let leagues = getLeagues()
-        let matches = leagues[0].matches
+//        let matches = leagues[0].matches
         
         let name1 = "Manchester United"
         let name2 = "Arsenal"
         
         var selectedMatch : Match?
-        for match in matches {
-            if match.homeTeam.name == name1 || match.visitorTeam.name == name1 ||
-            match.homeTeam.name == name2 || match.visitorTeam.name == name2 {
-                selectedMatch = match
-                print(match.homeTeam.name+"-"+match.visitorTeam.name)
-                break
+        for league in leagues{
+            for match in league.matches {
+                if match.homeTeam.name == name1 || match.visitorTeam.name == name1 ||
+                    match.homeTeam.name == name2 || match.visitorTeam.name == name2 {
+                    selectedMatch = match
+                    print(match.homeTeam.name+"-"+match.visitorTeam.name)
+                    break
+                }
             }
         }
 
         if let selectedMatch = selectedMatch {
             app.tables.cells.containingType(.StaticText, identifier: selectedMatch.homeTeam.name).containingType(.StaticText, identifier: selectedMatch.visitorTeam.name).element.tap()
+
+//            let tablesQuery = XCUIApplication().tables.cells.allElementsBoundByIndex
+//            print (tablesQuery)
             
-            XCTAssert(app.tables["\(selectedMatch.homeTeam.result!), \(selectedMatch.visitorTeam.result!), FT, -, \(selectedMatch.homeTeam.name), -, \(selectedMatch.visitorTeam.name)"].exists)            
+            let homeScore = app.tables.containingType(.StaticText, identifier: "homeScore").element
+            XCTAssertEqual(homeScore.label, selectedMatch.homeTeam.result!)            
         }
     }
     

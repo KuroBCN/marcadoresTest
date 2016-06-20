@@ -49,7 +49,9 @@
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZzW-W5-uEn" userLabel="VisitorTeamScore - Label">
                             <rect key="frame" x="200" y="0.0" width="50" height="80"/>
-                            <accessibility key="accessibilityConfiguration" identifier="visitorScore"/>
+                            <accessibility key="accessibilityConfiguration" identifier="visitorScore">
+                                <bool key="isElement" value="NO"/>
+                            </accessibility>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="ZzW-W5-uEn" secondAttribute="height" multiplier="5:8" id="HIb-bo-0TS"/>
                             </constraints>
@@ -59,6 +61,9 @@
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkh-w1-dKF" userLabel="- Label">
                             <rect key="frame" x="173" y="32" width="29" height="10"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <bool key="isElement" value="NO"/>
+                            </accessibility>
                             <constraints>
                                 <constraint firstAttribute="width" constant="29" id="KbV-0m-5gj"/>
                                 <constraint firstAttribute="height" constant="10" id="mKY-LZ-rPD"/>
@@ -69,6 +74,9 @@
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="2" translatesAutoresizingMaskIntoConstraints="NO" id="3CR-4C-pK9" userLabel="Status - Label">
                             <rect key="frame" x="173" y="9" width="29" height="20.5"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <bool key="isElement" value="NO"/>
+                            </accessibility>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="C5x-jp-Vrs"/>
                                 <constraint firstAttribute="width" constant="29" id="XgW-tx-Xxu"/>
@@ -84,7 +92,10 @@
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CDL-MP-fIZ" userLabel="HomeTeamScore - Label">
                             <rect key="frame" x="125" y="0.0" width="50" height="80"/>
-                            <accessibility key="accessibilityConfiguration" identifier="homeScore"/>
+                            <accessibility key="accessibilityConfiguration" identifier="homeScore">
+                                <accessibilityTraits key="traits" staticText="YES"/>
+                                <bool key="isElement" value="NO"/>
+                            </accessibility>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="CDL-MP-fIZ" secondAttribute="height" multiplier="5:8" id="GeR-Lp-SOV"/>
                             </constraints>
@@ -140,7 +151,10 @@
                     <rect key="frame" x="8" y="138" width="359" height="20"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HomeName" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="yln-4h-reK" userLabel="HomeTeamNames - Label">
-                            <rect key="frame" x="0.0" y="0.0" width="165.5" height="20"/>
+                            <rect key="frame" x="0.0" y="0.0" width="165" height="20"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <bool key="isElement" value="NO"/>
+                            </accessibility>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="jv8-4e-shY"/>
                             </constraints>
@@ -155,6 +169,9 @@
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLZ-GN-nrt" userLabel="- Label">
                             <rect key="frame" x="169" y="0.0" width="20" height="20"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <bool key="isElement" value="NO"/>
+                            </accessibility>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="AWn-xA-YEj"/>
                                 <constraint firstAttribute="width" constant="20" id="j00-Qm-JaL"/>
@@ -170,6 +187,9 @@
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VisitorName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="LQM-Mi-QRy" userLabel="VisitorTeamNames - Label">
                             <rect key="frame" x="193" y="0.0" width="165.5" height="20"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <bool key="isElement" value="NO"/>
+                            </accessibility>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="dzV-0Y-jjl"/>
                             </constraints>
