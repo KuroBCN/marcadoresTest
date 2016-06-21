@@ -34,7 +34,6 @@ class marcadoresUITests: XCTestCase {
         XCTAssert(app.exists)
     
         let leagues = getLeagues()
-//        let matches = leagues[0].matches
         
         let name1 = "Manchester United"
         let name2 = "Arsenal"
@@ -54,11 +53,11 @@ class marcadoresUITests: XCTestCase {
         if let selectedMatch = selectedMatch {
             app.tables.cells.containingType(.StaticText, identifier: selectedMatch.homeTeam.name).containingType(.StaticText, identifier: selectedMatch.visitorTeam.name).element.tap()
 
-//            let tablesQuery = XCUIApplication().tables.cells.allElementsBoundByIndex
-//            print (tablesQuery)
+            let homeScore = app.tables.staticTexts.containingType(.StaticText, identifier: "homeScore").elementBoundByIndex(0)
+            let visitorScore = app.tables.staticTexts.containingType(.StaticText, identifier: "visitorScore").elementBoundByIndex(0)
             
-            let homeScore = app.tables.containingType(.StaticText, identifier: "homeScore").element
-            XCTAssertEqual(homeScore.label, selectedMatch.homeTeam.result!)            
+            XCTAssertEqual(homeScore.label, selectedMatch.homeTeam.result)
+            XCTAssertEqual(visitorScore.label, selectedMatch.visitorTeam.result)
         }
     }
     

@@ -15,7 +15,6 @@ class MatchDetailTableViewController: UITableViewController {
     var league : League?
     var header : GSKStretchyHeaderView?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -69,15 +68,16 @@ class MatchDetailTableViewController: UITableViewController {
     }
     
     func configureTableHeader(){
+   
         let nibview = NSBundle.mainBundle().loadNibNamed(String(MatchDetailHeaderViewViewController), owner: nil, options: nil)
-        if let header = nibview.first as? MatchDetailHeaderViewViewController {            
+        if let header = nibview.first as? MatchDetailHeaderViewViewController {
             header.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
             header.configHeaderWithMatch(self.match!)
             header.isAccessibilityElement = false
-//            self.tableView.tableHeaderView = header            
+//            self.tableView.tableHeaderView = header
             self.tableView.addSubview(header)
         }
-    }
+}
     
     private func configurePullToRefresh(){
         let refreshControl = UIRefreshControl()

@@ -258,7 +258,7 @@
                 <outlet property="visitorTeamNameLabel" destination="LQM-Mi-QRy" id="rM3-96-QdJ"/>
                 <outlet property="visitorTeamScoreLabel" destination="ZzW-W5-uEn" id="pKy-cZ-WOK"/>
             </connections>
-            <point key="canvasLocation" x="-19.5" y="158"/>
+            <point key="canvasLocation" x="119.5" y="139"/>
         </view>
     </objects>
     <resources>
