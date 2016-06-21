@@ -9,7 +9,7 @@
 import UIKit
 import GSKStretchyHeaderView
 
-class MatchDetailHeaderViewViewController: GSKStretchyHeaderView {
+class MatchDetailHeaderViewViewController: UIView {
 
     private let maxFilterAlpha : CGFloat = 0.8
     private let maxContainerHeight : CGFloat = 80.0
@@ -29,27 +29,27 @@ class MatchDetailHeaderViewViewController: GSKStretchyHeaderView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.maximumContentHeight = 136.0
-        self.minimumContentHeight = 64.0
+//        self.maximumContentHeight = 136.0
+//        self.minimumContentHeight = 64.0
         filterView.backgroundColor = UIColor.marcadoresGreen()
         filterView.alpha = maxFilterAlpha
         statusLabel.alpha = 0.6
     }
     
-    override func didChangeStretchFactor(stretchFactor: CGFloat) {
-        var alpha = CGFloatInterpolate(stretchFactor, 1.0, maxFilterAlpha)
-        alpha = max(maxFilterAlpha, min(1, alpha));
-        filterView.alpha = alpha
-        
-        var teamsNamesAlpha = CGFloatInterpolate(stretchFactor, 0.0, 1.0)
-        teamsNamesAlpha = max(0, min(1, teamsNamesAlpha));
-        teamsNamesContainerView.alpha = teamsNamesAlpha
-        
-        var containerHeight = CGFloatInterpolate(stretchFactor, minContainerHeight, maxContainerHeight)
-        containerHeight = max(minContainerHeight, min(maxContainerHeight, containerHeight))
-        containerViewConstraintHeight.constant = containerHeight
-        self.layoutIfNeeded()
-    }
+//    override func didChangeStretchFactor(stretchFactor: CGFloat) {
+//        var alpha = CGFloatInterpolate(stretchFactor, 1.0, maxFilterAlpha)
+//        alpha = max(maxFilterAlpha, min(1, alpha));
+//        filterView.alpha = alpha
+//        
+//        var teamsNamesAlpha = CGFloatInterpolate(stretchFactor, 0.0, 1.0)
+//        teamsNamesAlpha = max(0, min(1, teamsNamesAlpha));
+//        teamsNamesContainerView.alpha = teamsNamesAlpha
+//        
+//        var containerHeight = CGFloatInterpolate(stretchFactor, minContainerHeight, maxContainerHeight)
+//        containerHeight = max(minContainerHeight, min(maxContainerHeight, containerHeight))
+//        containerViewConstraintHeight.constant = containerHeight
+//        self.layoutIfNeeded()
+//    }
     
     // MARK: - Public methods
     func configHeaderWithMatch ( match : Match){
@@ -61,6 +61,4 @@ class MatchDetailHeaderViewViewController: GSKStretchyHeaderView {
         visitorTeamScoreLabel.text = match.visitorTeam.result
         statusLabel.text = match.statusShortDesc
     }
-    
-    
 }
